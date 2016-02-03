@@ -26,7 +26,7 @@
 							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
 							'		и Яндекс.Браузер появится в нижней панели. <br />' +
 							'		Откройте его и он расскажет о своих преимуществах. <br />' +
-							'		<a href="https://yandex.ru/support/yabrowser/install/install-chrome.xml" style="color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-chrome.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
 							'	</div>' +
 							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/arrow-down.png" alt="" style="position: absolute; left: -100px; bottom: -40px;" />' +
 							'</div>' +
@@ -45,7 +45,7 @@
 							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
 							'		и Яндекс.Браузер появится в нижней панели. <br />' +
 							'		Откройте его и он расскажет о своих преимуществах. <br />' +
-							'		<a href="https://yandex.ru/support/yabrowser/install/install-opera.xml" style="color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-opera.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
 							'	</div>' +
 							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/arrow-up.png" alt="" style="position: absolute; right: -80px; top: -10px;" />' +
 							'</div>' +
@@ -63,7 +63,7 @@
 							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
 							'		и Яндекс.Браузер появится в нижней панели. <br />' +
 							'		Откройте его и он расскажет о своих преимуществах. <br />' +
-							'		<a href="https://yandex.ru/support/yabrowser/install/install-firefox.xml" style="color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-firefox.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
 							'	</div>' +
 							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/arrow-up.png" alt="" style="position: absolute; right: -80px; top: -10px;" />' +
 							'</div>' +
@@ -78,7 +78,7 @@
 							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
 							'		и Яндекс.Браузер появится в нижней панели. <br />' +
 							'		Откройте его и он расскажет о своих преимуществах. <br />' +
-							'		<a href="https://yandex.ru/support/yabrowser/install/install-ie.xml" style="color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-ie.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
 							'	</div>' +
 							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/arrow-down-2.png" alt="" style="position: absolute; right: -80px; bottom: -10px;" />' +
 							'</div>' +
@@ -94,7 +94,7 @@
 							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
 							'		и Яндекс.Браузер появится в нижней панели. <br />' +
 							'		Откройте его и он расскажет о своих преимуществах. <br />' +
-							'		<a href="https://yandex.ru/support/yabrowser/install/install-edge.xml" style="color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-edge.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
 							'	</div>' +
 							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/arrow-down-2.png" alt="" style="position: absolute; right: -80px; bottom: -10px;" />' +
 							'</div>' +
