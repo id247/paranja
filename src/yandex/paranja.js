@@ -165,7 +165,7 @@
 							'';	
 
 
-	function isIE () {
+	function isIETest () {
 	  var myNav = navigator.userAgent.toLowerCase();
 	  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 	}
@@ -192,7 +192,7 @@
 	// Internet Explorer 6-11
 	var isIE = /*@cc_on!@*/false || !!document.documentMode;	
 	// Internet Explorer 8
-	var isIE8 = isIE && (isIE () == 8);
+	var isIE8 = isIE && (isIETest() == 8);
 	// Edge 20+
 	var isEdge = !isIE && !!window.StyleMedia;
 	// Chrome 1+
@@ -214,8 +214,10 @@
 
 	//template = templateStart + templateIe8 + templateEnd;
 	
+	
+
 	//banner link		
-	var link = document.getElementById('swiffycontainer') || document.querySelector('.js-paranja-link');
+	var link = document.getElementById('swiffycontainer') || document.querySelectorAll('.js-paranja-link')[0];
 	//console.log(link);
 	if (!link) return;
 
