@@ -12,6 +12,11 @@
 		return;
 	}
 
+	function isIE () {
+	  var myNav = navigator.userAgent.toLowerCase();
+	  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+	}
+
 	//templates
 	var templateStart = 	'<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/close.png" alt="" style="position: absolute; right: 15px; top: 15px; cursor: pointer;"/>';
 	var templateEnd = 		'';
@@ -85,6 +90,22 @@
 							'';
 
 
+	var templateIe = 		'<div style="position: absolute; left: 0px; top: 0; right: 0; bottom: 0; margin: auto; width: 700px; max-height: 200px; font-family: arial,helvetica,sans-serif">' +
+							'	<div style="color: #f7c833; font-size: 26px; line-height: 1.5; margin: 0 0 15px; font-family: tahoma, arial, sans-serif;">' +
+							'		Для того, чтобы установить Яндекс.Браузер,<br />' +
+							'		нажмите на кнопку &laquo;Выполнить&raquo; на панели уведомлений в нижней части окна браузера' +
+							'	</div>' +
+							'	<div style="color: #fff; font-size: 18px; line-height: 1.5;">' +
+							'		В&nbsp;появившемся диалоговом окне нажмите &laquo;Запустить&raquo;, а&nbsp;затем &laquo;Начать&nbsp;пользоваться&raquo;,' +
+							'		и Яндекс.Браузер появится в нижней панели. <br />' +
+							'		Откройте его и он расскажет о своих преимуществах. <br />' +
+							'		<a href="https://yandex.ru/support/yabrowser/install/install-ie.xml" style="font-size: 14px; color: #f7c833; text-decoration: underline;" target="_blank">Помощь в установке</a>' +
+							'	</div>' +
+							'	<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/arrow-down-2.png" alt="" style="position: absolute; right: -80px; bottom: -10px;" />' +
+							'</div>' +
+							'';
+
+
 	var templateEdge = 		'<div style="position: absolute; left: 0px; top: 0; right: 0; bottom: 0; margin: auto; width: 700px; max-height: 200px; font-family: arial,helvetica,sans-serif">' +
 							'	<div style="color: #f7c833; font-size: 26px; line-height: 1.5; margin: 0 0 15px; font-family: tahoma, arial, sans-serif;">' +
 							'		Для того, чтобы установить Яндекс.Браузер,<br />' +
@@ -125,7 +146,9 @@
 	// At least Safari 3+: "[object HTMLElementConstructor]"
 	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 	// Internet Explorer 6-11
-	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;	
+	// Internet Explorer 8
+	var isIE8 = isIE && (isIE () == 8);
 	// Edge 20+
 	var isEdge = !isIE && !!window.StyleMedia;
 	// Chrome 1+
@@ -138,6 +161,7 @@
 	if (isOpera) template = templateStart + templateOpera + templateEnd;;
 	if (isFirefox) template = templateStart + templateFirefox + templateEnd;;
 	if (isIE) template = templateStart + templateIe + templateEnd;
+	if (isIE8) template = templateStart + templateIe8 + templateEnd;
 	if (isChrome) template = templateStart + templateChrome + templateEnd;
 	if (isEdge) template = templateStart + templateEdge + templateEnd;
 	//if (isBlink) template = document.getElementById('template-blink');
