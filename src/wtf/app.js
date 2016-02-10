@@ -39,11 +39,11 @@
 	var parentDoc = window.parent.document;
 	var parentNode = frameElement.parentNode;
 
-	parentNode.style.position = 'fixed';
-	parentNode.style.top = '0';
-	parentNode.style.right = '0';
-	parentNode.style.bottom = '0';
-	parentNode.style.zIndex = '1000';
+	frameElement.style.position = 'fixed';
+	frameElement.style.top = '0';
+	frameElement.style.right = '0';
+	frameElement.style.bottom = '0';
+	frameElement.style.zIndex = '1000';
 
 	// parentDoc.body.appendChild(container);
 
