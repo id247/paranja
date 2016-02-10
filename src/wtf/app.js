@@ -1,6 +1,6 @@
 ;(function(){
 
-	var stage = new swiffy.Stage(document.getElementById('wtf_swiffycontainer'),
+	var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
           swiffyobject, 
           {});      
     
@@ -20,7 +20,7 @@
 	// opener.style.zIndex = '10';
 
 	//container.appendChild(opener);
-
+frameElement.style.width = '640px';
 	var opened = false;
 
 	container.addEventListener('click', function(e){

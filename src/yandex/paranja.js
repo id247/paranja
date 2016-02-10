@@ -16,7 +16,7 @@
 	var paranja = document.createElement('div');
 
 	var css = '' +
-	'.prnj { font-family: arial, sans-serif; opacity: 0; z-index: 1000; position: fixed; top: 0; left: 0; right:0; bottom: 0; background: url("https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/bg.png"); background: rgba(0,0,0,.8); color: #fff; transition: opacity .8s; }' +
+	'.prnj { font-family: arial, sans-serif; opacity: 0; z-index: 1000; position: fixed; top: 0; left: 0; right:0; bottom: 0; background: url("https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/bg.png"); background: rgba(0,0,0,.9); color: #fff; transition: opacity .8s; }' +
 	'.prnj__close { position: absolute; right: 25px; top: 25px; cursor: pointer; }' +
 	'.prnj__content { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }' +
 	'.prnj__text-placeholder { text-align: center; position: absolute; left: 50px; right: 50px; bottom: 0px; top: 0; margin: auto; width: 745px; height: 350px; }' +
@@ -98,7 +98,7 @@
 							'		нажмите кнопку' +
 							'		<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/ff-download.png" alt="" style="vertical-align: middle;" />' +
 							'		справа от адресной строки,' + 
-							' 		а&nbsp;затем дважды нажмите значок установочного файла &laquo;Yandex.exe&raquo; и&nbsp;следуйте инструкциям' +
+							' 		а&nbsp;затем нажмите значок установочного файла &laquo;Yandex.exe&raquo; и&nbsp;следуйте инструкциям' +
 							'		</div>' +
 							'	</div>' +
 							'</div>' +
