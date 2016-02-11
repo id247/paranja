@@ -44,9 +44,13 @@
 		if ( Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 ){
 			return 'safari';
 		}
+		
+		if (navigator.userAgent.toLowerCase().match('yabrowser')){
+			return 'yandex';
+		}
 
 		if ( !!window.chrome && !!window.chrome.webstore ){
-			return 'chrome';
+			return 'chrome';				
 		}
 
 		var isIE = /*@cc_on!@*/false || !!document.documentMode
@@ -64,7 +68,7 @@
 
 
 	var css = '' +
-	'.prnj { font-family: arial, sans-serif; opacity: 0; z-index: 1000; position: fixed; top: 0; left: 0; right:0; bottom: 0; background: url("https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/bg.png"); background: rgba(0,0,0,.9); color: #fff; transition: opacity .8s; }' +
+	'.prnj { font-family: arial, sans-serif; opacity: 0; z-index: 10000; position: fixed; top: 0; left: 0; right:0; bottom: 0; background: url("https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/bg.png"); background: rgba(0,0,0,.9); color: #fff; transition: opacity .8s; }' +
 	'.prnj__close { position: absolute; right: 25px; top: 25px; cursor: pointer; }' +
 	'.prnj__content { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }' +
 	'.prnj__text-placeholder { text-align: center; position: absolute; left: 10px; right: 10px; bottom: 0px; top: 0; margin: auto; width: 745px; height: 350px; }' +
@@ -77,6 +81,9 @@
 
 	'.prnj__content--opera .prnj__close { top: auto; bottom: 25px; }' +
 	'.prnj__content--opera .prnj__arrow { right: 25px; top: 60px; }' +
+
+	'.prnj__content--yandex .prnj__close { top: auto; bottom: 25px; }' +
+	'.prnj__content--yandex .prnj__arrow { right: 25px; top: 60px; }' +
 
 	'.prnj__content--ff .prnj__close { top: auto; bottom: 25px; }' +
 	'.prnj__content--ff .prnj__arrow { right: 105px; top: 30px; }' +
@@ -117,6 +124,25 @@
 							'',
 									
 
+		yandex: 			'<div class="prnj__content prnj__content--yandex">' +
+							'	<img class="prnj__close" src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/close.png" alt="" />' +
+							'	<img class="prnj__arrow" src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/arrow-opera.png" alt="" />' +
+							'	<div class="prnj__text-placeholder">' +
+							'		<img class="prnj__logo" src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/logo.png" alt="" />' +
+							'		<div class="prnj__title">' +
+							'			Спасибо, что скачали Яндекс.Браузер' +
+							'		</div>' +
+							'		<div class="prnj__text">' +
+							'		Для того, чтобы установить его,<br />' +
+							'		нажмите на появившуюся иконку браузера' +
+							'		<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/yandex-download-2.png?2" alt="" style="vertical-align: middle;" />' +
+							'		справа от адресной строки, и&nbsp;следуйте инструкциям' +
+							'		</div>' +
+							'	</div>' +
+							'</div>' +
+							'',
+									
+
 		opera: 				'<div class="prnj__content prnj__content--opera">' +
 							'	<img class="prnj__close" src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/close.png" alt="" />' +
 							'	<img class="prnj__arrow" src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/arrow-opera.png" alt="" />' +
@@ -130,7 +156,7 @@
 							'		нажмите кнопку' +
 							'		<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/opera-download.png" alt="" style="vertical-align: middle;" />' +
 							'		справа от адресной строки,' + 
-							' 		а&nbsp;затем дважды нажмите значок установочного файла &laquo;Yandex.exe&raquo; и&nbsp;следуйте инструкциям' +
+							' 		а&nbsp;затем дважды нажмите значок установочного файла &laquo;Yandex&raquo; и&nbsp;следуйте инструкциям' +
 							'		</div>' +
 							'	</div>' +
 							'</div>' +
@@ -149,7 +175,7 @@
 							'		нажмите кнопку' +
 							'		<img src="https://ad.csdnevnik.ru/special/staging/adfox/yandex/files/ff-download.png" alt="" style="vertical-align: middle;" />' +
 							'		справа от адресной строки,' + 
-							' 		а&nbsp;затем нажмите значок установочного файла &laquo;Yandex.exe&raquo; и&nbsp;следуйте инструкциям' +
+							' 		а&nbsp;затем нажмите значок установочного файла &laquo;Yandex&raquo; и&nbsp;следуйте инструкциям' +
 							'		</div>' +
 							'	</div>' +
 							'</div>' +
@@ -228,6 +254,7 @@
 	
 	//who we are
 	var browser = getBrowser();
+
 	if (!browser) return; //no paranjas for unknown browsers
 
 	//parent window
@@ -254,7 +281,7 @@
 		link[i].setAttribute('target', '_parent'); //hotfix - set same window for download target
 
 		link[i].addEventListener('click', function(e){
-			e.preventDefault();
+			//e.preventDefault();
 			parentDoc.body.appendChild(paranja);
 			
 			setTimeout( function(){
