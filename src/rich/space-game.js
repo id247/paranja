@@ -4,9 +4,8 @@
 	//vars
 
 
-	var bannerWidth = '300px';
-	var bannerHeight = '300px';
-
+	var bannerWidth = '600px';
+	var bannerHeight = '600px';
 
 	var parentNode = frameElement.parentNode;
     var closeElement = document.createElement('button');
@@ -27,12 +26,31 @@
 
     //functions
 
+	function focus(){
+		var canvas = swiffycontainer.querySelector('canvas');
+		if (canvas){
+			canvas.style.outline = 'none';
+			canvas.setAttribute('tabindex', 1);
+			canvas.focus();
+		}else{
+			setTimeout(focus, 100);
+		}		
+	}
+
+	var keydownEvent = function(e){
+	    // space and arrow keys
+	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+	        e.preventDefault();
+	    }
+	}
+
 	function close(){
 		parentNode.style.display = 'none';
 		parentNode.innerHTML = '';
+		window.removeEventListener('keydown', keydownEvent, false);
 	}
 
-	function init(parentNode, bannerHeight){
+	function setStyles() {
 		parentNode.style.position = 'fixed';
 		parentNode.style.left = '0';
 		parentNode.style.right = '0';
@@ -74,7 +92,10 @@
 
 	}
 
-
+	function init(){
+		setStyles();
+		focus();		
+	}
 
     //events
 
@@ -90,9 +111,11 @@
 		close();
 	});
 
+	window.addEventListener('keydown', keydownEvent, false);
+
 	//init 
 
-	init(parentNode, bannerHeight);
+	init();
 
 
 })();
