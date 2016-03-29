@@ -88,7 +88,8 @@
 		closeElement.style.cursor = 'pointer';
 		closeElement.style.zIndex = '10';
 		closeElement.style.border = '0';
-		closeElement.style.background = 'url("https://ad.csdnevnik.ru/special/staging/adfox/rich/files/pixel.gif")';
+		closeElement.style.background = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=)';
+
 
 	}
 
